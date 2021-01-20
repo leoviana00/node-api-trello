@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../views/head'); %>
+</head>
+<body class="container">
+    
+    <h1></h1>
+    
+<header>
+    <%- include('../views/header'); %>
+</header>
+
+<div class="container mt-3">
+<!-- <table id="ajaxGrid" class="ajaxGrid display compact table table-striped table-bordered table-hover table-condensed table-auto-number"> -->
+    <table id="test_table" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Estado</th>
+              
+            </tr>
+        </thead>
+        <tbody id="ListTasks">
+        <% resp[0].checkItems.forEach(function(checkItems){ %>
+            <tr>
+                <td><%= checkItems.name %></td>
+                <td><%= checkItems.state %></td>
+                
+            </tr>
+        <% }); %>
+        </tbody>    
+      </table>
+
+ 
+  <button id="generate-excel" class="btn btn-danger">
+    Generate Excel</button>
+  <br /><br />
+</div>
+<footer>
+    <%- include('../views/footer'); %>
+</footer>
+
+
+
+</body>
+</html>
