@@ -35,7 +35,7 @@ app.get('/trello', async (req, res) => {
 
 });
 
-// Listando tarefas Extras do Time [3LA]
+// Listando tarefas dos cards dentro da lista
 app.use('/tarefas', async (req, res) => {
   console.log(req.query)
   const cardid = req.query.cardid
