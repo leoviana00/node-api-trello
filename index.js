@@ -13,13 +13,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.get("/", (req, res) =>{
+app.get("/actuator/health", (req, res) =>{
   res.send({
       "Titulo":"Sprints Informations", 
       "Versão": "0.1.0",
       "Status": "UP!"
   });
 })
+
+app.get('/', async (req, res) => {  
+  res.render('index');
+
+});
 
 // Listando os cards dentro da lista SPRINT
 app.get('/trello', async (req, res) => {
@@ -31,7 +36,7 @@ app.get('/trello', async (req, res) => {
   list[idList.name] = [idList.shortLink, idList.badges.checkItems, idList.badges.checkItemsChecked]
   });
   console.table(list);
-  res.render('index', {list: list});
+  res.render('trello', {list: list});
 
 });
 
