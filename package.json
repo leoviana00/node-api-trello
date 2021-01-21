@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Leonardo Viana Pereira",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
