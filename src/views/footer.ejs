@@ -1,0 +1,19 @@
+<!-- Export (excel)-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#test_table').DataTable({
+        "language": {
+        "lengthMenu": "Mostrando _MENU_ registros por páginas",
+        "zeroRecords": "Nada encontrado - desculpe!",
+        "info": "Mostando página _PAGE_ of _PAGES_",
+        "infoEmpty": "Nenhum registro disponível",
+        "infoFiltered": "(filtrado de  _MAX_ registros no total)"}
+    })
+});
+</script>
+
+<p class="text-center text-muted">© Squad Infraestrutura </p>
