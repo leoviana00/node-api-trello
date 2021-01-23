@@ -14,6 +14,7 @@
     <table id="test_table" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Nome da Sprint</th>
                 <th>Total de atividades</th>
                 <th>Concluídas</th>
@@ -25,13 +26,13 @@
         <% list.forEach(function(idList){ %>
             <tr>
                 
-                <td><%= idList.name %></td>
+                <td><a href=<%= idList.shortUrl %> target="_blank"><%= idList.name %></a></td>
                 <td><%= idList.badges.checkItems %></td>
                 <td><%= idList.badges.checkItemsChecked %></td>
                 
                 <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#">Listar</a>
+                      <a class="btn btn-primary" href="/tarefas?cardid=<%= idList.shortLink %>">Listar</a>
                     </div>
               </td>
                 
@@ -42,6 +43,16 @@
         <% }); %>
         </tbody>    
       </table>
+      <script>
+        var tables = document.getElementsByTagName('table');
+        var table = tables[tables.length - 1];
+        var rows = table.rows;
+        for(var i = 1, td; i < rows.length; i++){
+            td = document.createElement('td');
+            td.appendChild(document.createTextNode(i + 1));
+            rows[i].insertBefore(td, rows[i].firstChild);
+        }
+    </script>
 
                   
     </div>
