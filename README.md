@@ -15,7 +15,7 @@ yarn start
 - trello-node-api
 - dotenv
 
-Leonardo Viana, [22.01.21 13:31]
+
 ## Executando o app de dentro de um container
 
 ## Card
@@ -79,7 +79,7 @@ https://api.trello.com/1/cards/{id}/members?key=<key>&token=<token>
 https://api.trello.com/1/cards/wvsEwUKD/members?key=<key>&token=<token>
 
 ## Get Cards The Members on
-https://api.trello.com/1/members/{id}/cards?key=0471642aefef5fa1fa76530ce1ba4c85&token=9eb76d9a9d02b8dd40c2f3e5df18556c831d4d1fadbe2c45f8310e6c93b5c548
+https://api.trello.com/1/members/{id}/cards?key=<key>&token=<token>
 
 ## Get Cards User
 https://api.trello.com/1/members/5c8c18121ea22d351896eac5/cards?key=<key>&token=<token>
